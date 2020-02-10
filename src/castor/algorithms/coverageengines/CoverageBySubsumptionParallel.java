@@ -57,9 +57,10 @@ public class CoverageBySubsumptionParallel implements CoverageEngine {
 			Relation posExamplesRelation, Relation negExamplesRelation, Schema schema, DataModel dataModel, Parameters parameters, boolean withMatchings,
 			CoverageBySubsumptionParallel.EXAMPLES_SOURCE examplesSource, String posExamplesFile, String negExamplesFile) {
 		this.threads = parameters.getThreads();
-		if (withMatchings)
+		if (withMatchings) {
 			this.initWithMatchings(genericDAO, bottomClauseConstructionDAO, saturator, posExamplesRelation, negExamplesRelation,
 					schema, dataModel, parameters, examplesSource, posExamplesFile, negExamplesFile);
+		}
 		else
 			initWithoutMatchings(genericDAO, posExamplesRelation, negExamplesRelation, parameters, examplesSource, posExamplesFile, negExamplesFile);
 	}

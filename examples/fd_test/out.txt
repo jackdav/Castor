@@ -1,0 +1,284 @@
+[main] INFO  Reading parameters...
+[main] INFO  Parameters [createStoredProcedure=false, useStoredProcedure=false, estimationSample=1.0, minPrecision=0.0, minRecall=0.2, minPos=2, maxNoise=1.0, sample=1, beam=1, threads=4, minimizeBottomClause=false, reductionMethod=consistency, iterations=3, recall=10, groundRecall=10, maxterms=100000, useInds=false, dbURL=localhost, port=21212, randomSeed=1, samplingMethod=naive, generalizationMethod=naive, sampleInTesting=false, sampleGroundBottomClauses=false, sampleInCoveringApproach=false, shuffleExamples=false, randomizeRecall=true, allowSimilarity=false, evalfn=COVERAGE, matchingLiteralPrefix=m_, allStableCoverageInTraining=true, allStableCoverageInTesting=true, queryLimit=2147483647]
+[main] INFO  Reading data model...
+[main] INFO  Preprocessing...
+[main] INFO  Creating coverage engine...
+[R("4","Mike"), funcDep1("Mike","Thomas"), funcDep2("4","uSXvnIgTeFZFkPy0UluY"), R("4","Thomas"), funcDep3("Thomas","Mike"), funcDep4("4","7aRXz9eSVldl456k4mSO")]
+[]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep5("Mike","Thomas"), funcDep6("4","SyFQLVJ0FDf43GAd0JPz"), R("4","Thomas"), funcDep7("Thomas","Mike"), funcDep8("4","uvMnUi6fxBYbRaM1qQAK")]
+[S("Mike","doctor")]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep9("Mike","Thomas"), funcDep10("4","1MzicafRzWLoZyLT1ich"), R("4","Thomas"), funcDep11("Thomas","Mike"), funcDep12("4","JGGEzv0UgWX4tKu42Vpv")]
+[S("Mike","doctor")]
+[S("Mike","doctor")]
+[T("doctor","\$340000")]
+[R("5","Tim")]
+[]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[S("Tim","waiter")]
+[T("waiter","\$47000")]
+[R("6","Samuel")]
+[]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[S("Samuel","cop")]
+[T("cop","\$63000")]
+[R("4","Mike"), funcDep13("Mike","Thomas"), funcDep14("4","SX3PSztE0nVHXNQBbMb1"), R("4","Thomas"), funcDep15("Thomas","Mike"), funcDep16("4","KfRTADmJfnQZafsHe1vH")]
+[]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep17("Mike","Thomas"), funcDep18("4","vqm04jsLAmPDmu6lhzG8"), R("4","Thomas"), funcDep19("Thomas","Mike"), funcDep20("4","JSEiHfKHZc8c6AIqX6lO")]
+[S("Mike","doctor")]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep21("Mike","Thomas"), funcDep22("4","ofZQugiqiNdJyJB5BmZd"), R("4","Thomas"), funcDep23("Thomas","Mike"), funcDep24("4","d8TFjOWrfc4srxh1ny7L")]
+[S("Mike","doctor")]
+[S("Mike","doctor")]
+[T("doctor","\$340000")]
+[R("4","Mike"), funcDep25("Mike","Thomas"), funcDep26("4","M6sGlsCbN6tjRFqlV7Xx"), R("4","Thomas"), funcDep27("Thomas","Mike"), funcDep28("4","hN7HmfjumnKDgsfmYpzx")]
+[]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep29("Mike","Thomas"), funcDep30("4","iztYANGVyFJmihhaot9k"), R("4","Thomas"), funcDep31("Thomas","Mike"), funcDep32("4","vSDmURB4dtmgH5yGZi4r")]
+[S("Mike","doctor")]
+[R("4","Mike"), R("4","Thomas")]
+[R("4","Mike"), funcDep33("Mike","Thomas"), funcDep34("4","rgR6YNn3EBbAjrrMRqRW"), R("4","Thomas"), funcDep35("Thomas","Mike"), funcDep36("4","06b4RfX9ZBkvzemW2K6Y")]
+[S("Mike","doctor")]
+[S("Mike","doctor")]
+[T("doctor","\$340000")]
+[R("5","Tim")]
+[]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[S("Tim","waiter")]
+[T("waiter","\$47000")]
+[R("5","Tim")]
+[]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[R("5","Tim")]
+[R("5","Tim")]
+[S("Tim","waiter")]
+[S("Tim","waiter")]
+[T("waiter","\$47000")]
+[R("6","Samuel")]
+[]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[S("Samuel","cop")]
+[T("cop","\$63000")]
+[R("6","Samuel")]
+[]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[R("6","Samuel")]
+[R("6","Samuel")]
+[S("Samuel","cop")]
+[S("Samuel","cop")]
+[T("cop","\$63000")]
+[main] INFO  Creating coverage engine for covering approach...
+[main] INFO  Learning...
+[main] INFO  Training positive examples in table TD_TRAIN_POS: 3
+[main] INFO  Training negative examples in table TD_TRAIN_NEG: 6
+[main] INFO  Remaining uncovered examples: 3
+[main] INFO  Generating bottom clause for [4, 340000]...
+[R(V0,V2), funcDep1("Mike","Thomas"), funcDep2("4","iTcEJgl4VSbdGH5O00nl"), R(V0,V3), funcDep3("Thomas","Mike"), funcDep4("4","rLbDSkD0iPifmnLSvWpN")]
+[]
+[R(V0,V2), R(V0,V3)]
+[R(V0,V2), funcDep5("Mike","Thomas"), funcDep6("4","C35Gz0KmSbQM4ZuZS1Jm"), R(V0,V3), funcDep7("Thomas","Mike"), funcDep8("4","U8fnuPFzFBrd9WihU3uP")]
+[S(V2,V4)]
+[R(V0,V2), R(V0,V3)]
+[R(V0,V2), funcDep9("Mike","Thomas"), funcDep10("4","j5U1E6IltZUsHzrP66T0"), R(V0,V3), funcDep11("Thomas","Mike"), funcDep12("4","f0RR8C0iT4JKWzcrjrka")]
+[S(V2,V4)]
+[S(V2,V4)]
+[T(V4,V5)]
+[main] INFO  Literals: 17
+[main] INFO  Saturation time: 9 milliseconds.
+[main] INFO  Reordering bottom clause...
+[main] INFO  Generalizing clause...
+[main] INFO  Best armg at iter 0 - NumLits:17, Score:0.0
+[main] INFO  Best armg at iter 1 - NumLits:17, Score:0.0
+[main] INFO  Stats before reduction: Precision(new)=NaN, F1(new)=NaN, Recall(all)=0.0
+[main] INFO  Remaining uncovered examples: 2
+[main] INFO  Generating bottom clause for [5, 47000]...
+[R(V0,V2)]
+[]
+[R(V0,V2)]
+[R(V0,V2)]
+[S(V2,V3)]
+[R(V0,V2)]
+[R(V0,V2)]
+[S(V2,V3)]
+[S(V2,V3)]
+[T(V3,V4)]
+[main] INFO  Literals: 4
+[main] INFO  Saturation time: 9 milliseconds.
+[main] INFO  Reordering bottom clause...
+[main] INFO  Generalizing clause...
+[main] INFO  Best armg at iter 0 - NumLits:4, Score:-3.0
+[main] INFO  Best armg at iter 1 - NumLits:4, Score:-3.0
+[main] INFO  Stats before reduction: Precision(new)=0.3333333333333333, F1(new)=0.5, Recall(all)=1.0
+[main] INFO  Before reduction - NumLits:4, Score:-3.0
+[main] INFO  After reduction - NumLits:2, Score:-3.0
+[main] INFO  After minimization - NumLits:2
+[main] INFO  Stats: Score=-3.0, Precision(new)=0.3333333333333333, F1(new)=0.5, Recall(all)=1.0
+[main] INFO  New clause added to theory:
+td(V0,V1) :-
+	R(V0,V2).
+[main] INFO  New pos cover = 3, Total pos cover = 3, Total neg cover = 6
+[main] INFO  Definition learned:
+td(V0,V1) :-
+	R(V0,V2).	(Pos cover=3, Neg cover=6)
+
+[main] INFO  Evaluating on training data...
+[main] INFO  Positive examples in table TD_TRAIN_POS: 3
+[main] INFO  Negative examples in table TD_TRAIN_NEG: 6
+[main] INFO  Statistics:
+		|	    Actual		|
+Predicted	|    Positive	|    Negative	|    Total
+    Positive	|	3	|	6	|	9
+    Negative	|	0	|	0	|	0
+Total		|	3	|	6	|	9
+
+Accuracy: 0.3333333333333333
+Precision: 0.3333333333333333
+Recall: 1.0
+F1: 0.5
+
+[main] INFO  Evaluating on testing data...
+[R("3","Rob")]
+[]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[S("Rob","ceo")]
+[T("ceo","\$750000")]
+[R("2","Steve")]
+[]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[S("Steve","teacher")]
+[T("teacher","\$56000")]
+[R("1","Joe"), funcDep1("Joe","Jack"), funcDep2("1","1RlAYvuWLMAUt5ZhYMai"), R("1","Jack"), funcDep3("Jack","Joe"), funcDep4("1","ZPgQ941gkYS8AhdMyLde")]
+[]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep5("Joe","Jack"), funcDep6("1","PSp4SGza2ibNxajOqdkR"), R("1","Jack"), funcDep7("Jack","Joe"), funcDep8("1","VBVIy7SUOE8TeYcgSpny")]
+[S("Joe","accountant")]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep9("Joe","Jack"), funcDep10("1","I8LPDLosOpWaqLvbpWnX"), R("1","Jack"), funcDep11("Jack","Joe"), funcDep12("1","hs8qKxFmC3ksQs3ZbcI6")]
+[S("Joe","accountant")]
+[S("Joe","accountant")]
+[T("accountant","\$79000")]
+[R("3","Rob")]
+[]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[S("Rob","ceo")]
+[T("ceo","\$750000")]
+[R("3","Rob")]
+[]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[R("3","Rob")]
+[R("3","Rob")]
+[S("Rob","ceo")]
+[S("Rob","ceo")]
+[T("ceo","\$750000")]
+[R("2","Steve")]
+[]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[S("Steve","teacher")]
+[T("teacher","\$56000")]
+[R("2","Steve")]
+[]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[R("2","Steve")]
+[R("2","Steve")]
+[S("Steve","teacher")]
+[S("Steve","teacher")]
+[T("teacher","\$56000")]
+[R("1","Joe"), funcDep13("Joe","Jack"), funcDep14("1","yMZALmJMROlGj8lPequM"), R("1","Jack"), funcDep15("Jack","Joe"), funcDep16("1","TQFGu03CedD5gpDUZMy5")]
+[]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep17("Joe","Jack"), funcDep18("1","1kQl68nAjOM1ymmNQKhf"), R("1","Jack"), funcDep19("Jack","Joe"), funcDep20("1","BhzK6MWEgdXK6PJVMCEl")]
+[S("Joe","accountant")]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep21("Joe","Jack"), funcDep22("1","f8qHTp0thKzjGlTucpcv"), R("1","Jack"), funcDep23("Jack","Joe"), funcDep24("1","3njnaQ8j0O7D2vaAxfF6")]
+[S("Joe","accountant")]
+[S("Joe","accountant")]
+[T("accountant","\$79000")]
+[R("1","Joe"), funcDep25("Joe","Jack"), funcDep26("1","1ff7yUo8uRgdncYNaZf1"), R("1","Jack"), funcDep27("Jack","Joe"), funcDep28("1","DNdLOer3p58tDcC2jgGA")]
+[]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep29("Joe","Jack"), funcDep30("1","KUktD64khSiVEfX5rDUL"), R("1","Jack"), funcDep31("Jack","Joe"), funcDep32("1","2OrW1GqZG40ADWPhmbIC")]
+[S("Joe","accountant")]
+[R("1","Joe"), R("1","Jack")]
+[R("1","Joe"), funcDep33("Joe","Jack"), funcDep34("1","tkQmrLoCp8Qp5VDDGXT5"), R("1","Jack"), funcDep35("Jack","Joe"), funcDep36("1","N9oYsJFpvUhsj2exe7iA")]
+[S("Joe","accountant")]
+[S("Joe","accountant")]
+[T("accountant","\$79000")]
+[main] INFO  Positive examples in table TD_TEST_POS: 3
+[main] INFO  Negative examples in table TD_TEST_NEG: 6
+[main] INFO  Statistics:
+		|	    Actual		|
+Predicted	|    Positive	|    Negative	|    Total
+    Positive	|	3	|	6	|	9
+    Negative	|	0	|	0	|	0
+Total		|	3	|	6	|	9
+
+Accuracy: 0.3333333333333333
+Precision: 0.3333333333333333
+Recall: 1.0
+F1: 0.5
+
+[main] INFO  Total time: 293 Minutes : 0.004883333333333333
+[main] INFO  Creating coverage engine time: 159
+[main] INFO  Learning time: 131
+[main] INFO  Bottom-clause construction time: 18
+[main] INFO  Coverage time: 51
+[main] INFO  Coverage calls: 28
+[main] INFO  Scoring time: 19
+[main] INFO  Entailment time: 11
+[main] INFO  Minimization time: 0
+[main] INFO  Reduction time: 7
+[main] INFO  LGG time: 0
+[main] INFO  LearnClause time: 61
+[main] INFO  Preprocessing time (extracting statistics, creating indexes, etc) (not included in total time): 2
+[main] INFO  Computing join sizes time: 0
+[main] INFO  Similarity search time: 0

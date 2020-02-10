@@ -204,7 +204,7 @@ public class CastorCmd {
 				// Read from DB
 				schema = genericDAO.getSchema();
 			}
-
+			
 			// Get INDs from file or DDL
 			//TODO hardcoded name, replace with name of ddl + INDs
 			String castorInputFolder = "castor-input/";
@@ -225,7 +225,6 @@ public class CastorCmd {
 				this.readINDsFromJson(indsJson);
 				this.readMDsFromJson(indsJson);
 			}
-
 			// Get data model from file
 			String dataModelFile = getOption(dataModelFilePath);
 			JsonObject dataModelJson = FileUtils.convertFileToJSON(dataModelFile);
@@ -372,7 +371,7 @@ public class CastorCmd {
 			}
 			NumbersKeeper.creatingCoverageTime = tw.time();
 			
-			if (saturation || groundSaturation) {
+			if (saturation || groundSaturation) { 
 				if (this.exampleForSaturation >= coverageEngine.getAllPosExamples().size() || this.exampleForSaturation < 0) {
 					throw new IllegalArgumentException("Illegal index of positive example to saturate (greater than maximum index of positive examples or less than 0).");
 				}

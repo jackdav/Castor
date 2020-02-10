@@ -1,6 +1,7 @@
 package castor.settings;
 
 import castor.language.Mode;
+import castor.language.FunctionalDependency;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +13,14 @@ public class DataModel {
 	private List<Mode> modesB;
 	private String spName;
 	private Map<String, List<List<String>>> modesBMap;
+	private List<FunctionalDependency> fds;
 
-	public DataModel(Mode modeH, List<Mode> modesB, String spName) {
+	public DataModel(Mode modeH, List<Mode> modesB, List<FunctionalDependency> fds, String spName) {
 		super();
 		this.modeH = modeH;
 		this.modesB = modesB;
 		this.spName = spName;
+		this.fds = fds;
 	}
 
 	public DataModel(Mode modeH, List<Mode> modesB, Map<String, List<List<String>>> modesBMap, String spName) {
@@ -39,6 +42,12 @@ public class DataModel {
 	}
 	public void setModesB(List<Mode> modesB) {
 		this.modesB = modesB;
+	}
+	public List<FunctionalDependency> getFDs() {
+		return fds;
+	}
+	public void setFDs(List<FunctionalDependency> fds) {
+		this.fds = fds;
 	}
 	public String getSpName() {
 		return spName;

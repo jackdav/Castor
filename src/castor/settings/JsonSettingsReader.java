@@ -12,6 +12,7 @@ import com.google.gson.JsonObject;
 
 import castor.language.InclusionDependency;
 import castor.language.MatchingDependency;
+import castor.language.FunctionalDependency;
 import castor.language.Mode;
 import castor.language.Relation;
 import castor.language.Schema;
@@ -154,6 +155,7 @@ public class JsonSettingsReader {
 	public static DataModel readDataModel(JsonObject dataModelJson) {
 		Mode modeH;
 		List<Mode> modesB;
+		List<FunctionalDependency> fds;
 		String spName;
 
 		// Read head mode
@@ -176,6 +178,18 @@ public class JsonSettingsReader {
 			}
 		}
 		
+		// Read functional dependencies
+		
+		if (dataModelJson.get("functionalDependencies") == null) {
+			throw new IllegalArgumentException("Functional dependencies not set in data model json.");
+		} else {
+			fds = new LinkedList<FunctionalDependency>();
+			JsonArray fdsArray = dataModelJson.get("functionalDependencies").getAsJsonArray();
+			for (int i = 0; i < fdsArray.size(); i++) {
+				String fdString = fdsArray.get(i).getAsString();
+				fds.add(FunctionalDependency.stringToFD(fdString));
+			}
+		}
 		// Read stored prodecure name
 		if (dataModelJson.get("spName") == null) {
 			throw new IllegalArgumentException("Stored procedure name not set in data model json.");
@@ -183,7 +197,7 @@ public class JsonSettingsReader {
 			spName = dataModelJson.get("spName").getAsString();
 		}
 		
-		return new DataModel(modeH, modesB, spName);
+		return new DataModel(modeH, modesB, fds, spName);
 	}
 
 

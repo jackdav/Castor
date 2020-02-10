@@ -1,0 +1,18 @@
+{
+        "headMode": "td(+a,+d)",
+        "bodyModes": [
+                "R(-a,+b)",
+		"R(+a,-b)",
+                "S(-b,+c)",
+		"S(+b,-c)",
+                "T(-c,+d)",
+		"T(+c,-d)"
+        ],
+	"functionalDependencies": [
+		"R([a]->[b])"
+	],
+        "comments": [
+        ],
+        "spName": "CastorProcedure"
+}
+

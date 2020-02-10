@@ -1,0 +1,27 @@
+{
+        "createStoredProcedure": false,
+        "useStoredProcedure": false,
+        "sampling": "naive",
+        "sampleGroundBottomClauses" : false,
+        "sampleInCoveringApproach": false,
+        "randomizeRecall": true,
+        "allowSimilarity": false,
+        "iterations": 3,
+        "minprec": 0,
+        "minrec": 0.2,
+        "maxterms": 100000,
+        "sample": 1,
+        "beam": 1,
+        "minimizeBottomClause": false,
+        "threads": 4,
+        "reductionMethod": "consistency",
+        "recall": 10,
+        "groundRecall": 10,
+        "useInds": false,
+        "dbURL": "localhost",
+        "port": 21212,
+        "matchingLiteralPrefix": "m_",
+        "allStableCoverageInTraining": true,
+        "allStableCoverageInTesting": true
+}
+

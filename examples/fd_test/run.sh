@@ -1,0 +1,1 @@
+java -jar ../../dist/Castor.jar -parameters castor-input/parameters.json -dataModel castor-input/datamodel.json -trainPosSuffix "_TRAIN_POS" -trainNegSuffix "_TRAIN_NEG" -testPosSuffix "_TEST_POS" -testNegSuffix "_TEST_NEG" -test > "out.txt"
